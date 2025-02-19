@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e3f2fd; /* Light Blue Background */
+  color: #444;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1e88e5; /* Blue */
+  text-align: center;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1565c0; /* Dark Blue */
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #64b5f6; /* Light Blue */
+}
+
+/* Input Field */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #1e88e5; /* Blue Border */
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.input-field:focus {
+  border-color: #1565c0;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(21, 101, 192, 0.5);
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn {
+  background-color: #1565c0;
+  color: white;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.save-btn:hover {
+  background-color: #0d47a1;
+}
+
+/* Tabs List */
+.tabs-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs-list li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: white;
+  border: 2px solid #1e88e5; /* Blue Border */
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.tabs-list li:hover {
+  background-color: #e3f2fd;
+}
+
+.tabs-list li label {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* FIXED: Second tab extra padding issue */
+.tabs-list li:nth-child(2) {
+  padding-left: 12px !important; /* Same padding as other tabs */
+}
+
+/* Categories List */
+.categories-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categories-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: white;
+  border: 2px solid #64b5f6;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.categories-list li:hover {
+  background-color: #bbdefb;
+}
+
+.categories-list li span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.categories-list li button {
+  padding: 6px 12px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.categories-list li button:hover {
+  opacity: 0.9;
+}
+
+.categories-list li .edit-btn {
+  background-color: #ffb347;
+  color: white;
+}
+
+.categories-list li .open-btn {
+  background-color: #47d147;
+  color: white;
+}
+
+.categories-list li .delete-btn {
+  background-color: #ff4747;
+  color: white;
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tabs-list li, .categories-list li {
+  animation: fadeIn 0.3s ease-in-out;
+}

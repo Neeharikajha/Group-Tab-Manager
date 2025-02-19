@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Group Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tab Group Manager</h1>
+
+    <!-- Section to save selected tabs -->
+    <div class="section">
+      <h2>Save Selected Tabs</h2>
+      <input type="text" id="categoryName" placeholder="Enter category name" class="input-field">
+      <button id="saveTabs" class="btn save-btn">Save Selected Tabs</button>
+      <h3>Current Tabs</h3>
+      <ul id="currentTabsList" class="tabs-list"></ul>
+    </div>
+
+    <!-- Section to display saved categories -->
+    <div class="section">
+      <h2>Saved Categories</h2>
+      <ul id="categoryList" class="categories-list"></ul>
+      
+      <!-- Keeping only one Save Changes button with correct functionality and blue styling -->
+      <button id="saveChanges" class="btn save-btn">Save Changes</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+// const categoryNameInput = document.getElementById('categoryName');
+// const saveTabsButton = document.getElementById('saveTabs');
+// const categoryList =document.getElementById('categoryList');
+
+
+// document.addEventListener('DOMContentLoaded', loadCategories);
+
+// saveTabsButton.addEventListener('click', async()=>{
+//     const categoryName = categoryNameInput.value.trim();
+//     if(!categoryName){
+//         alert('pls enter a category');
+//         return;
+//     }
+
+//     //get all tabs in current window
+//     //chrome.tabs.query : uses this api to get all tabs in current window
+
+//     const tabs = await chrome.tabs.query({currentWindow: true});
+//     const tabUrls = tabs.map(tab => tab.url);
+
+//     //save category and its tabs to storage
+
+//     const categoryData = { [categoryName]: tabUrls};
+//     chrome.storage.sync.set(categoryData, ()=>{
+//         alert(`tabs saved under "${categoryName}"!`);
+//         categoryNameInput.value = '';
+//         loadCategories();
+//     });
+// });
+
+// // load and display saved categories
+
+// function loadCategories(){
+
+//     //clear current list 
+//     categoryList.innerHTML = '';
+
+//     //fetch all saved categories and their tab url from chrome storage
+//     //null = get all data, callback function receives data as an object (data)
+//     chrome.storage.sync.get(null, (data)=>{
+
+//         //loop through each saved category
+//         //Object.entries(data) : converts data obj into an array of [key, value] pairs
+//         for (const [categoryName, tabUrls] of Object.entries(data)){
+
+//             //create new list item for category 
+//             const listItem = document.createElement('li');
+//             listItem.textContent = categoryName;
+
+//             //set a click event listener to list item:
+//             listItem.addEventListener('click', ()=> openTabs(tabUrls));
+
+//             //append the list item to the category item (ul)
+//             categoryList.appendChild(listItem);
+//         }
+//     });
+// }
+
+// //tabes an array of tabUrls and opens each one in individual new tab using chrome.tab.create api.
+
+// function openTabs(tabUrls){
+//     tabUrls.forEach(url => chrome.tabs.create({url}));
+// }
+
