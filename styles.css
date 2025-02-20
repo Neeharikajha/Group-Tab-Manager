@@ -183,3 +183,31 @@ h3 {
 .tabs-list li, .categories-list li {
   animation: fadeIn 0.3s ease-in-out;
 }
+
+
+
+.save-changes-btn {
+  background-color: #1565c0; /* Dark Blue */
+  color: white;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  display: block;
+}
+
+.save-changes-btn:hover {
+  background-color: #0d47a1; /* Darker Shade */
+  transform: scale(1.02);
+}
+
+.save-changes-btn:active {
+  background-color: #0b3c7d;
+  transform: scale(0.98);
+}
+
